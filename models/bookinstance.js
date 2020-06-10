@@ -20,4 +20,5 @@ BookInstanceSchema
     return moment(this.due_back).format('Do of MMMM, YYYY')
   })
 
+
 module.exports = mongoose.model('BookInstance', BookInstanceSchema);
