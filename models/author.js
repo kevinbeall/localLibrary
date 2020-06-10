@@ -12,10 +12,10 @@ var AuthorSchema = new Schema(
 );
 
 //Virtual for author's full name
-AuthorSchema.virtual('name').get(() => {
+AuthorSchema.virtual('name').get(function () {
   var fullname = '';
   if (this.first_name && this.family_name) {
-    fullname = `${family_name}, ${first_name}`;
+    fullname = `${this.family_name}, ${this.first_name}`;
   }
   if (!this.first_name || !this.family_name) {
     fullname = '';
