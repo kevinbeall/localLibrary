@@ -36,7 +36,6 @@ exports.author_detail = (req, res, next) => {
       err.status = 404;
       return next(err)
     }
-    console.log(results.author_books)
     //Successful render
     res.render('author_detail', { title: 'Author Detail', author: results.author, author_books: results.authors_books })
   })
